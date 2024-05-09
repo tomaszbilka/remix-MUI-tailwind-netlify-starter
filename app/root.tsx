@@ -1,3 +1,4 @@
+import "~/styles/tailwind.css";
 import {
   Links,
   Meta,
@@ -15,7 +16,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body id="app">
         <Outlet />
         <ScrollRestoration />
         <Scripts />
