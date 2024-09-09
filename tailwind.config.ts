@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
 export default {
+  darkMode: ["class"],
   content: ["./app/**/*.{js,jsx,ts,tsx}"],
   important: "#app",
   theme: {
@@ -60,7 +61,12 @@ export default {
         lg: "1200px",
         xl: "1536px",
       },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animate")],
 } satisfies Config;
