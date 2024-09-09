@@ -15,12 +15,16 @@ import {
 import { themeSessionResolver } from "./sessions.server";
 import { LoaderFunctionArgs } from "@remix-run/node";
 import clsx from "clsx";
+import { I18nextProvider } from "react-i18next";
+import i18n from "./i18n";
 
 export default function AppWithProviders() {
   const data = useLoaderData<typeof loader>();
   return (
     <ThemeProvider specifiedTheme={data.theme} themeAction="/action/set-theme">
-      <App />
+      <I18nextProvider i18n={i18n} defaultNS="common">
+        <App />
+      </I18nextProvider>
     </ThemeProvider>
   );
 }
