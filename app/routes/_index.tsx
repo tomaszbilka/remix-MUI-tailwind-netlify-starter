@@ -1,4 +1,5 @@
 import { MetaFunction } from "@remix-run/node";
+import { Theme, useTheme } from "remix-themes";
 import { Button } from "~/components/ui/button";
 
 export const meta: MetaFunction = () => {
@@ -9,11 +10,17 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Index() {
+  const [, setTheme] = useTheme();
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
+    <div>
       <div className="text-lg text-lime-400">Welcome to Remix</div>
-      <div className="mt-8 ml-8">Hello</div>
-      <Button variant="outline">Hello ShadCN</Button>
+      <div className="mt-8 ml-8 text-black dark:text-white">Hello</div>
+      <Button variant="outline" onClick={() => setTheme(Theme.LIGHT)}>
+        Light
+      </Button>
+      <Button variant="outline" onClick={() => setTheme(Theme.DARK)}>
+        Dark
+      </Button>
     </div>
   );
 }

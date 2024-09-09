@@ -1,6 +1,6 @@
 ### Remix starter
 
-This is starting point for Remix app with TailwindCSS, MUI, and Netlify Edge Functions.
+This is starting point for Remix app with TailwindCSS, Shadcn, and Netlify Edge Functions.
 
 #### Installation
 
