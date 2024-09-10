@@ -1,4 +1,16 @@
 import type { Config } from "tailwindcss";
+import defaultTheme from "tailwindcss/defaultTheme";
+
+const colors = {
+  light: "#cdd3d5",
+  dark: "#393e41",
+  primary: "#75b8c8",
+  secondary: "#75b8c8",
+  accent: "#c2e812",
+  success: "#91f5ad",
+  error: "#fc5130",
+  warning: "#ffad05",
+};
 
 export default {
   darkMode: ["class"],
@@ -7,47 +19,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: {
-          default: "rgba(159, 201, 239, 0.8)",
-          mobileGrid: "#F5F5F5",
-          success: "rgba(234, 242, 234, 1)",
-          warning: "#FDF0E6",
-        },
-        error: {
-          main: "#D32F2F",
-          dark: "#C62828",
-          light: "#EF5350",
-          contrast: "#FFFFFF",
-        },
-        info: {
-          main: "#0288D1",
-          dark: "#01579B",
-          light: "#03A9F4",
-          contrast: "#FFFFFF",
-          fill: "#E6F3FA",
-        },
-        success: {
-          main: "#2E7D32",
-          dark: "#1B5E20",
-          light: "#4CAF50",
-          contrast: "#FFFFFF",
-        },
-        textColor: {
-          disabled: "rgba(0, 0, 0, 0.38)",
-          error: "rgba(211, 47, 47, 1)",
-          primary: "rgba(0, 0, 0, 0.87)",
-          secondary: "rgba(0, 0, 0, 0.6)",
-        },
-        warning: {
-          main: "#ED6C02",
-          dark: "#E65100",
-          light: "#FF9800",
-          contrast: "#FFFFFF",
+        color: {
+          ...colors,
         },
       },
       fontFamily: {
-        poppins: ["Poppins", "sans-serif"],
-        mukta: ["Mukta", "sans-serif"],
+        sans: ["Lato", ...defaultTheme.fontFamily.sans],
       },
       fontWeight: {
         "font-regular": "400",
@@ -60,11 +37,6 @@ export default {
         md: "900px",
         lg: "1200px",
         xl: "1536px",
-      },
-      borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
       },
     },
   },

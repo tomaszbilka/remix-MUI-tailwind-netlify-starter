@@ -21,7 +21,7 @@ export default function Index() {
         <LanguageSwitch />
       </div>
       <p className="my-2 mx-2 text-xl">{t("test")}</p>
-      <div className="text-lg text-lime-400">Welcome to Remix</div>
+      <div className="text-lg text-color-error">Welcome to Remix</div>
       <div className="mt-8 ml-8 text-black dark:text-white">Hello</div>
       <Button variant="outline" onClick={() => setTheme(Theme.LIGHT)}>
         Light

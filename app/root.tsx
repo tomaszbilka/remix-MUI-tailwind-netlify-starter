@@ -42,7 +42,7 @@ export function App() {
         <Links />
       </head>
       <body id="app">
-        <main className="bg-white dark:bg-zinc-900 min-h-screen">
+        <main className="bg-color-light dark:bg-color-dark min-h-screen">
           <Outlet />
         </main>
         <ScrollRestoration />
